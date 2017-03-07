@@ -1,0 +1,137 @@
+// =============================================================================
+// TYPE (CSS)
+// =============================================================================
+
+// Stencil type component additions
+// -----------------------------------------------------------------------------
+
+
+body {
+    font-size: $body-fontSize;
+    font-weight: $body-font-weight;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: $header-font-weight;
+    margin-top: $heading-marginTop;
+}
+
+h5,
+h6 {
+    text-transform: $heading-textTransform;
+}
+
+a {
+    transition: $anchor-transition;
+}
+
+cite {
+    line-height: $blockquote-cite-lineHeight;
+    margin: $blockquote-cite-margin;
+}
+
+.page-heading {
+    font-size: $h1-font-size;
+    margin: 0 0 spacing("double");
+    text-align: center;
+}
+
+
+.definitionList {
+    @include clearfix;
+}
+
+.definitionList-key {
+    color: stencilColor("color-textSecondary");
+    float: left;
+    font-weight: fontWeight("normal");
+    margin: 0 spacing("quarter") 0 0;
+}
+
+.definitionList-value {
+    margin: 0;
+}
+
+
+// Vinay made changes for product display
+
+// I made changes -->
+
+
+
+#content-swapper {
+    background: #bdb39a;
+    margin-top: 20px;
+}
+
+#content-swapper .nav-pills {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    margin-left: 0;
+}
+
+#content-swapper .nav-pills>li.active>a, #content-swapper .nav-pills>li.active>a:focus, #content-swapper .nav-pills>li.active>a:hover {
+    background: #742626;
+    color: #fff;
+}
+
+#content-swapper .nav-pills li {
+    width: 100%;
+    text-align: center;
+}
+
+.nav-pills>li {
+    float: left;
+}
+
+.nav>li, .nav>li>a, .navbar {
+    position: relative;
+}
+
+.nav>li, .nav>li>a {
+    display: block;
+}
+
+#content-swapper .tab-content {
+    border: 1px solid #ebe0c1;
+    padding: 15px 25px 0;
+    display: block;
+    background-color: #fff;
+
+}
+
+.pill-content>.active, .tab-content>.active {
+    height: auto!important;
+}
+
+.productMasonry, .tab-content>.active {
+    overflow: hidden;
+}
+
+.pill-content>.pill-pane, .tab-content>.tab-pane {
+    display: block!important;
+    height: 0!important;
+    overflow-y: hidden!important;
+}
+
+.tab-content>.active {
+    display: block;
+    height: auto!important;
+}
+
+.row.categoryBoxes p {
+    background: #742626;
+    color: #fff;
+    font-weight: 700;
+    position: relative;
+    text-align: left;
+    padding: 6px;
+}

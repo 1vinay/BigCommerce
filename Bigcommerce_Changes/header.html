@@ -1,0 +1,62 @@
+{{#if banners.top}}
+<div class="banners" data-banner-location="top">
+    <div class="banner">
+        {{{limit banners.top 1}}}
+    </div>
+</div>
+{{/if}}
+<header class="header" role="banner">
+    <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
+        <span class="mobileMenu-toggleIcon">Toggle menu</span>
+    </a>
+
+    {{> components/common/navigation}}
+
+    {{#if template_file '===' 'pages/home'}}
+        <div class="header-logo header-logo--{{theme_settings.logo-position}}">
+           <!-- {{> components/common/store-logo}}-->
+			
+			<div class="row headerVS"> 
+
+                       <div class="col-sm-4 logoVS"> 
+                            <a href="http://pukepine.mybigcommerce.com/">
+				            <img class="header-logo-image" src="http://cdn3.bigcommerce.com/s-ulb8d5/images/stencil/250x100/sutherland_copy_1480562073__51376_1487115842.png" alt="Sutherland Timber">
+                                </a>
+                        </div>
+
+                        <div class="col-sm-4 address-VS">
+
+                        <h4><address>197 Ohoka Rd, Kaiapoi 7630</address></h4>
+
+                        </div> 
+                        
+                        <div class="col-sm-4 phone-VS">
+                        <h4 class="subheading-text"><strong>03-327 8843</strong></h4>
+                        </div>
+        </div>
+        </div>
+    {{else}}
+        <div class="header-logo header-logo--{{theme_settings.logo-position}}">
+            {{> components/common/store-logo}}
+        </div>
+    {{/if}}
+
+
+    <div class="header-pages">
+       <ul class="navPages-list">
+
+        <li class="navUser-item">
+            <a class="navUser-action navUser-action--quickSearch" href="#" data-search="quickSearch" aria-controls="quickSearch" aria-expanded="false">{{lang 'common.search'}}</a>
+        </li>
+
+        <li class="navPages-item">
+            <a class="navPages-action" href="#"> Contact Us</a>
+        </li>
+
+       </ul>
+
+       
+
+    </div>  
+
+</header>
